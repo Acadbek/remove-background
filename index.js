@@ -41,6 +41,6 @@ function removebackground() {
   });
 }
 
-async function getd() {
+async function rmb() {
   removebackground()
 }

@@ -20,10 +20,9 @@
 
 <body>
 	<input value="./img/microwave.avif" id="urls" />
-	<button onclick="getd().then((data) => {
-		const datas = data
+	<button onclick="rmb().then((data) => {
 		const img = document.createElement('img')
-		datas.map((el) => {
+		data.map((el) => {
 			img.setAttribute('src', el.link)
 			let div = document.querySelector('.wrapper')
 			div.append(img)
