@@ -2,15 +2,15 @@
   "images": [
     {
       "id": 1,
-      "link": "./a.jpg"
+      "link": "./img/microwave.avif"
     },
     {
       "id": 4,
-      "link": "./a.jpg"
+      "link": "./img/microwave.avif"
     },
     {
       "id": 55,
-      "link": "./a.jpg"
+      "link": "./img/microwave.avif"
     }
   ]
 }
