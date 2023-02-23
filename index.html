@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Remove Background of Bulk Images</title>
+</head>
+<style>
+	body {
+		margin: 0;
+		background-color: black;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100vh
+	}
+</style>
+
+<body>
+	<input value="a.jpg" id="urls" />
+	<button onclick="getd().then((data) => {
+		const datas = data
+		const img = document.createElement('img')
+		datas.map((el) => {
+			img.setAttribute('src', el.link)
+			let div = document.querySelector('.wrapper')
+			div.append(img)
+		})
+	})" class="btn">Remove</button>
+
+	<div class="wrapper"></div>
+
+	<script src="./index.js">
+		// let btn = document.querySelector('.btn')
+		// let img = document.querySelector('.img')
+
+		// function removeBackground(imageUrl) {
+		// 	// Create an HTML image element
+		// 	var img = new Image();
+
+		// 	// Set the source of the image
+		// 	img.src = imageUrl;
+
+		// 	// Allow cross-origin access to the image
+		// 	img.crossOrigin = "Anonymous";
+
+		// 	// Wait for the image to load
+		// 	img.onload = function () {
+		// 		// Create a canvas element
+		// 		var canvas = document.createElement('canvas');
+		// 		var ctx = canvas.getContext('2d');
+
+		// 		// Set the canvas dimensions to the image dimensions
+		// 		canvas.width = img.width;
+		// 		canvas.height = img.height;
+
+		// 		// Draw the image onto the canvas
+		// 		ctx.drawImage(img, 0, 0);
+
+		// 		// Get the image data from the canvas
+		// 		var imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+
+		// 		// Loop through each pixel in the image
+		// 		for (var i = 0; i < imageData.data.length; i += 4) {
+		// 			// Check if the pixel is white
+		// 			if (imageData.data[i] == 255 && imageData.data[i + 1] == 255 && imageData.data[i + 2] == 255) {
+		// 				// Set the alpha value to 0
+		// 				imageData.data[i + 3] = 0;
+		// 			}
+		// 		}
+
+		// 		// Put the modified image data back onto the canvas
+		// 		ctx.putImageData(imageData, 0, 0);
+
+		// 		// Convert the canvas back to an image
+		// 		var newImg = new Image();
+		// 		newImg.src = canvas.toDataURL();
+
+		// 		// Display the new image
+		// 		document.body.appendChild(newImg);
+		// 	};
+		// }
+
+		// btn.addEventListener('click', () => removeBackground('https://image.yachtcharterfleet.com/w1200/h779/qh/ca/k184d9776/vessel/resource/117086/charter-kogo-yacht-12.jpg'))
+
+	</script>
+</body>
+
+</html>
